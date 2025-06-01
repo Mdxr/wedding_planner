@@ -1,0 +1,696 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kapakana:wght@300..400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+:root{
+    --purple-gradient: linear-gradient(135deg, #a800f7, #2575fc);
+    --pink: #f07b84;
+    --mud: #422416;
+    --light-pink: #f2c6c5;
+}
+.error{
+    color: var(--pink);
+}
+#menu-icon{
+    display: none;
+}
+.sidebar#menu{
+    display: none;
+}
+.home-link{
+    display: none !important;
+}
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 4rem;
+}
+.logo{
+    font-family: 'Kapakana', cursive;
+    font-weight: 600;
+    color: var(--mud);
+    text-decoration: none;
+    font-size: 36px;
+}
+.logo span{
+    font-family: 'Kapakana', cursive;
+    color: var(--pink);
+}
+header nav ul{
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+header nav ul li a{
+    text-decoration: none;
+    color: var(--mud);
+    font-weight: 500;
+    transition: color 0.3s ease;
+    font-weight: 400;
+}
+header nav ul li a:hover{
+    color: var(--pink);
+}
+main{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 4rem;
+}
+main .info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+}
+main .info h1{
+    font-size: 3rem;
+    color: var(--mud);
+}
+main .info h1 span{
+    color: var(--pink);
+}
+.btn{
+    background-color: var(--pink);
+    padding: .75rem 1.5rem;
+    color: white;
+    border-radius: 15px;
+    border: 2px solid var(--mud);
+    transition: .2s ease;
+    cursor: pointer;
+    font-weight: 500;
+    text-decoration: none;
+}
+.btn:hover{
+    background-color: var(--light-pink);
+    color: var(--mud);
+}
+main .visual img{
+    width: 100%;
+}
+.banner{
+    margin-top: 6rem;
+    padding: 1rem 0;
+    text-align: center;
+    background-color: var(--pink);
+}
+.banner marquee h1{
+    font-weight: 600;
+    font-size: 21px;
+    color: white;
+}
+#features{
+    padding: 2rem 4rem;
+    color: var(--mud);
+    min-height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--light-pink);
+}
+section img{
+    width: 250px;
+    filter: contrast(1.05);
+}
+section h2{
+    font-weight: 500;
+}
+#features ul{
+    display: grid;
+    margin-top: 2rem;
+    gap: 2rem;
+    grid-template-columns: repeat(3,1fr);
+}
+#features ul .feature{
+    background-color: white;
+    padding: 3rem 2rem;
+    display: flex;
+    border-radius: 15px;
+    gap: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    height: 100%;
+}
+#features ul .feature h2{
+    color: var(--mud);
+    font-weight: 500;
+    font-size: 21px;
+}
+#features ul .feature p{
+    color: var(--pink);
+}
+#about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 4rem;
+    text-align: center;
+    min-height: 100dvh;
+}
+#about p{
+    margin: 2rem 0;
+    max-width: 700px;
+}
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--light-pink);
+    padding: 2rem 4rem;
+}
+footer p{
+    font-size: 11px;
+}
+footer ul a{
+    text-decoration: none;
+    color: var(--mud);
+}
+footer ul a:hover{
+    color: var(--pink);
+}
+/* project */
+#user-selection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-direction: column;
+    min-height: 88dvh;
+}
+#user-selection .options{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+#user-selection .options a{
+    max-width: 250px;
+    border: 2px solid var(--mud);
+    height: 100%;
+    display: grid;
+    grid-template-rows: 90% 10%;
+    padding: 2rem 3rem 1rem 3rem;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    color: var(--mud);
+    transition: all 0.3s ease;
+}
+#user-selection .options a:hover{
+    transform: translateY(-1rem);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+#user-selection .options a h2{
+    font-weight: 400;
+}
+#user-selection .options a img{
+    width: 100%;
+}
+#user-selection h1{
+    font-weight: 400;
+    margin-bottom: 3rem;
+}
+
+/* project */
+
+.project{
+    display: grid;
+    grid-template-columns: 15% 85%;
+    min-height: 88vh;
+}
+.project .sidebar{
+    display: flex;
+    flex-direction: column;
+    border-right: 2px solid var(--mud);
+}
+.project .sidebar a{
+    text-decoration: none;
+    color: var(--mud);
+    padding: 1rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+.project .sidebar a:hover{
+    background-color: var(--light-pink);
+    color: var(--mud);
+}
+.project .main-content .tab{
+    min-height: 87dvh;
+    padding: 0.5rem 1rem;
+    display: none;
+    flex-direction: column;
+}
+.project .main-content .tab h1{
+    font-weight: 600;
+    color: var(--mud);
+}
+.project .main-content .tab.active{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+.project .main-content #general{
+    padding: 0 7.25rem;
+    gap: 2rem;
+}
+.project .main-content #general .bride-groom-details{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+.project .main-content #general .bride-groom-details :where(.bride, .groom){
+}
+.project .main-content #general .bride-groom-details h3{
+    font-weight: 600;
+    color: var(--mud);
+    margin: .75rem;
+    margin-bottom: 1rem;
+}
+
+.project .main-content .inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.project .main-content .inputs input{
+    padding: .5rem 1rem;
+    border:none;
+    border-bottom: 2px solid var(--mud);
+    font-size: 21px;
+}
+.project .main-content .inputs input:focus{
+    outline: none;
+    border-color: var(--pink);
+    color: var(--pink);
+}
+a.active{
+    background-color: var(--pink);
+    color: white !important;
+}
+
+/* Venues */
+#venue .venues-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1REM;
+    margin-bottom: 1rem;
+}
+#venue .venues-container .venue.active{
+    background-color: var(--pink);
+}
+#venue .venues-container .venue{
+    background-color: var(--light-pink);
+    padding: 1rem;
+    border-radius: 15px;    
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    gap: 1rem;
+}
+#venue .venues-container .venue:hover{
+    background-color: var(--pink);
+    cursor: pointer;
+}
+
+#venue .venues-container .venue img{
+    width: 100%;
+    border-radius: 10px;
+}
+#venue .venues-container .venue h3{
+    font-weight: 600;
+    color: var(--mud);
+    font-size: 16px;
+}
+#venue .venues-container .venue p{
+    color: var(--mud);
+    font-weight: 400;
+    font-size: 12px;
+}
+
+/* guests */
+
+#guests.active {
+    display:grid;
+    grid-template-columns: 1fr 3fr;
+    justify-content: start;
+    align-items: start;
+    gap: 2rem;
+    padding: 2rem 4rem;
+}
+#guests table {
+    width: 100%;
+    border: 2px solid var(--mud);
+    border-collapse: collapse;
+}
+#guests table th, #guests table td {
+    border: 2px solid var(--mud);
+    padding: 0.5rem;
+    text-align: center;
+}
+#guests table th {
+    background-color: var(--pink);
+    color: white;
+}
+
+#guests .delete-btn {
+    background-color: var(--pink);
+    color: white;
+    padding: 0.25rem 1rem;
+    border: 2px solid var(--mud);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+#guests .delete-btn:hover {
+    background-color: var(--light-pink);
+    color: var(--mud);
+}
+
+/* menu */
+#menu.active {
+    display:grid;
+    grid-template-columns: 1fr 3fr;
+    justify-content: start;
+    align-items: start;
+    gap: 2rem;
+    padding: 2rem 4rem;
+}
+#menu table {
+    width: 100%;
+    border: 2px solid var(--mud);
+    border-collapse: collapse;
+}
+#menu table th, #menu table td {
+    border: 2px solid var(--mud);
+    padding: 0.5rem;
+    text-align: center;
+}
+#menu table th {
+    background-color: var(--pink);
+    color: white;
+}
+
+#menu .delete-btn {
+    background-color: var(--pink);
+    color: white;
+    padding: 0.25rem 1rem;
+    border: 2px solid var(--mud);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+#menu .delete-btn:hover {
+    background-color: var(--light-pink);
+    color: var(--mud);
+}
+/* card */
+
+#card {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem;
+    background-color: var(--light-pink);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+#card .card{
+    padding: 2rem 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-color: white;
+    border-radius: 15px;
+}
+#card .card h2{
+    font-weight: 600;
+    font-size: 41px;
+    color: var(--mud);
+    font-family: "Kapakana", cursive;
+}
+#card .card img{
+    width: 400px;
+    padding: 1rem 0;
+}
+#card .card p{
+    font-weight: 400;
+    color: var(--mud);
+    font-size: 18px;
+    text-align: center;
+}
+#card .card p strong{
+    font-weight: 500;
+    color: var(--mud);
+    font-size: 18px;
+    text-align: center;
+}
+
+#card .card h2 span{
+    color: var(--pink);
+    font-family: "Kapakana", cursive;
+}
+/* auth forms */
+.auth-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100dvh;
+    background-color: var(--light-pink);
+}
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 15px;
+}
+.auth-form .error{
+    color: var(--pink);
+    font-size: 11px;
+    text-align: start;
+    margin-bottom: 1rem;
+}
+.auth-form img{
+    width: 200px;
+    margin: 0 auto;
+    margin-top: 1rem;
+    filter: contrast(1.05);
+}
+.auth-form .flower-img{
+    margin-bottom: 1rem;
+}
+.auth-form h1 {
+    font-weight: 600;
+    color: var(--mud);
+    text-align: center;
+    font-size: 21px;
+}
+.auth-form p {
+    color: var(--mud);
+    text-align: center;
+    font-size: 14px;
+}
+.auth-form p a{
+    color: var(--pink);
+    text-decoration: none;
+}
+.auth-form input {
+    padding: 0.5rem;
+    border: none;
+    border-bottom: 2px solid var(--mud);
+}
+.auth-form input:focus {
+    outline: none;
+    border-color: var(--pink);
+    color: var(--pink);
+}
+.auth-form .btn{
+    padding: .5rem 1rem;
+    margin-bottom: 1rem;
+}
+
+/* RESPONSIVENESS */
+
+@media screen and (max-width: 768px) {
+    .project{
+        grid-template-columns: 20% 80%;
+    }
+    #venue .venues-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .project .main-content #general{
+        padding: 2rem;
+    }
+    .project .main-content #general .inputs input{
+        width: 100%;
+    }
+    #guests.active {
+        grid-template-columns: 1fr;
+    }
+    #menu.active {
+        grid-template-columns: 1fr;
+    }
+    #card .card{
+        width: 450px;
+        padding: 2rem;
+    }
+    #card .card h2{
+        font-size: 31px;
+    }
+    #card .card img{
+        width: 200px;
+    }
+    #card .card p{
+        font-size: 12px;
+    }
+    #card .card p strong{
+        font-size: 12px;
+    }
+    #features ul{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .hero{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 3rem;
+    }
+    .hero .info{
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .home-link{
+        display: unset !important;
+    }
+    .sidebar{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--light-pink);
+        left: 0;
+        top: -100%;
+    }
+    .sidebar.active{
+        top: 75px;
+        padding: 0 !important;
+        z-index: 1000;
+        gap: 0 !important;
+    }
+    .sidebar a{
+        padding: 1rem;
+        text-decoration: none;
+        color: var(--mud);
+    }
+    #menu-icon{
+        display: unset;
+    }
+    header nav{
+        padding: 1rem 2rem;
+    }
+    header nav ul{
+        flex-direction: column;
+        gap: 0.5rem;
+        position: absolute;
+        background-color: var(--light-pink);
+        width: 100%;
+        left: 0;
+        padding: 2rem;
+        top: -200px;
+        transition: all 0.3s ease;
+    }
+    header nav ul.active{
+        top: 70px;
+    }
+    main{
+        grid-template-columns: 1fr;
+        padding: 2rem;
+    }
+    main .info h1{
+        font-size: 2rem;
+    }
+    .btn{
+        width: 100%;
+        text-align: center;
+    }
+    footer{
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        gap: 2rem;
+    }
+    #user-selection{
+        padding: 4rem;
+        text-align: center;
+    }
+    #user-selection .options{
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .project .main-content #general .bride-groom-details{
+        flex-direction: column;
+        align-items: center;
+    }
+    #venue .venues-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    #guests.active {
+        padding: 1rem;
+        min-height: unset;
+    }
+    .project{
+        grid-template-columns: 1fr;
+    }
+    #guests table {
+        font-size: 12px;
+    }
+    .project .main-content #guests input{
+        font-size: 16px;
+    }
+    .project .main-content #menu input{
+        font-size: 16px;
+    }
+    #menu.active{
+        padding: 1rem;
+        min-height: unset;
+    }
+    #card {
+        gap: 5rem;
+        padding: 0;
+        overflow-x: hidden;
+    }
+    #card .card{
+        transform: rotate(90deg)translateY(6%);
+    }
+    #card h1{
+        transform: translateX(-10%);
+    }
+
+}
